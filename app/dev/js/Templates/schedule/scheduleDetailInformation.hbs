@@ -1,0 +1,32 @@
+<div class ="row">
+    <div class="col-md-12">
+        <h3 class="informationArticleTitle">Horario: {{name}}</h3>
+        <table id= "scheduleDetailInformation" class="table table-bordered schedule">
+            <thead>
+                <tr>
+                    <th width="18%">Horario (Hrs.)</th>
+                    <th width="12%">Lunes</th>
+                    <th width="12%">Martes</th>
+                    <th width="12%">Miercoles</th>
+                    <th width="12%">Jueves</th>
+                    <th width="12%">Viernes</th>
+                    <th width="12%">Sabado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each daySections}}
+                <tr>
+                    <td class="thTable">{{title}}</td>
+                    {{#each daySectionId}}
+                    <td class="nonSelected" id={{this}}></td>
+                    {{/each}}
+                </td>
+                {{/each}}
+                </tbody>
+            </table>
+        
+        <br>
+
+    </div>
+</div>
+<br>

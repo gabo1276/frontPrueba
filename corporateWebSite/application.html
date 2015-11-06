@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/requirejs/require.js"></script>
+  <script src="../app/dev/js/require.config.js"></script>
+  <script src="../app/dev/js/router.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../app/dev/js/alertnew.js"></script>
+
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+  <div class="row backgroundImage">
+    <div class="container my-container">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="headerInitialSpace"></div>
+              <div id="header"></div>
+              <script type="text/javascript">
+              $('#header').load('header.html');
+              </script>
+            </div>
+          </div>
+          <div id="applicationContent" class="informationContainer "> </div>
+          <div class="headerInitialSpace"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div id="footer" ></div>
+        <script type="text/javascript">
+        $('#footer').load('footer.html');
+        </script>
+      </div>
+    </div>
+  </div>
+</body>

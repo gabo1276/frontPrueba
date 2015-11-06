@@ -1,0 +1,29 @@
+<table id="paymentsInformation"class="table table-striped table-bordered table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre Plan</th>
+      <th>Nombre Horario</th>
+      <th>Fecha Inicio</th>
+      <th>Fecha Termino</th>
+      <th>Entrar Piscina</th>
+      <th>Salir Piscina</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#payments}}
+    <tr id="{{id}}" class="{{#isProductActive product.startValidDate product.endValidDate}}success{{/isProductActive}}" >
+      <td></td>
+      <td>{{product.productPK.plan.name}}</td>
+      <td scheduleId="{{product.productPK.schedule.id}}">{{product.productPK.schedule.name}}{{#if_not_null product.productPK.schedule.name }} &nbsp;&nbsp;&nbsp;&nbsp; <a><span id="viewSchedule" class="glyphicon glyphicon-zoom-in"></span></a> {{/if_not_null}}</td>
+      <td>{{product.startValidDate}}</td>
+      <td>{{product.endValidDate}}</td>
+
+      <td productId="{{product.id}}" align="center"><a><span id="entrance" class="glyphicon glyphicon-log-in"></span></a></td>  
+      <td productId="{{product.id}}" align="center"><a><span id="exit" class="glyphicon glyphicon-log-out"></span></a>
+      </td>
+   
+    </tr>
+    {{/payments}}
+  </tbody>
+</table>

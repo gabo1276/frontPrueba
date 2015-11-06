@@ -1,0 +1,90 @@
+<script src="../../../../../../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../../../../../../bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js">
+</script>
+<link href="../../../../../../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" media="screen">
+<script>
+$('#startValidDate').datepicker({
+language: "es",
+orientation: "top auto"
+});
+$('#startValidDate').change(function() {
+var date = $('#startValidDate').val();
+var dayMonthYear = date.split("/")
+var plusMonth = dayMonthYear[1] + "/" + dayMonthYear[0] + "/" + dayMonthYear[2];
+var plusMonthDate = new Date(plusMonth);
+plusMonthDate.setMonth(plusMonthDate.getMonth() + 1);
+var resultDateString = plusMonthDate.toLocaleDateString();
+dayMonthYear = resultDateString.split("/");
+dayMonthYear[1] = (dayMonthYear[1].length == 1) ? ("0" + dayMonthYear[1]) : dayMonthYear[1];
+dayMonthYear[0] = (dayMonthYear[0].length == 1) ? ("0" + dayMonthYear[0]) : dayMonthYear[0];
+var resultDateFinalString = dayMonthYear[1] + "/" + dayMonthYear[0] + "/" + dayMonthYear[2];
+$('#endValidDate').attr("value", resultDateFinalString);
+$("#endValidDate").val(resultDateFinalString)
+});
+</script>
+<div id="addProduct">
+  <br>
+  <form id="addProductForm" role="form" class=".form-inline informationArticleTitle">
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+        <p class="textTitle">Datos Producto</p>
+        <div class="line"></div><br>
+        <div class="form-group row">
+          
+          <label for="inputKey" class="col-md-3 control-label textTitleBasic">Digitos del Rut o Apellido Paterno</label>
+          <div class="col-md-6" id="user">
+            <input type="text" class="form-control" name="userId" id="userId">
+          </div>
+          <div class="col-md-2">
+            <button id="searchUsers" class="btn btn-default botonSearch">Buscar</button>
+          </div>
+        </div>
+          <div class="form-group row textTitleBasic">
+            <div id="usersInformation" >
+            </div>
+          </div>
+          
+          <div id="userDetailInformation" class="textTitleBasic">
+          </div>
+          
+          <div class="form-group row textTitleBasic">
+            <div id="plansInformation">
+            </div>
+          </div>
+          
+          <div id="planDetailInformation" class="textTitleBasic">
+          </div>
+          <div class="form-group row textTitleBasic">
+            <div id="schedulesInformation">
+            </div>
+          </div>
+          
+          <div id="scheduleDetailInformation" class="textTitleBasic">
+          </div>
+          
+          <div class="form-group row">
+            <label for="inputValue" class="col-md-3 control-label">Fecha de inicio de Producto</label>
+            <div class="col-md-3">
+              <input id="startValidDate" type="text" class="form-control" value="{{user.startValidDate}}" name="startValidDate" id="datepicker" placeholder="DD/MM/AAAA">
+            </div>
+            <label for="inputValue" class="col-md-2 control-label">Fecha de fin de Producto</label>
+            <div class="col-md-3">
+              <input id="endValidDate" type="text" class="form-control" value="{{user.endValidDate}}" name="endValidDate" id="datepicker" placeholder="DD/MM/AAAA">
+            </div>
+          </div>
+
+        <br>
+        <div class="form-group row">
+          <div class="col-md-12 botonGuardar">
+            <label id="followPaymentForm" class="control-label btn btn-primary">Siguiente Datos Pago</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="addPayment">
+</div>

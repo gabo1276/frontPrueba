@@ -1,0 +1,10 @@
+<label for="inputValue" class="col-md-2 control-label">Planes</label>
+<div class="col-md-5">
+  <select id= "plansCombo" name = "plansCombo" class="form-control">
+    <option value=""></option>
+    {{#plans}}
+    <option id="{{id}}}" typeOfPlan="{{typeOfPlan}}" hoursPerWeek="{{hoursPerWeek}}"" blocksPerWeek="{{blocksPerWeek}}">{{name}}, {{#if_eq typeOfPlan "typeBlocksPerWeek" }} Tipo (Curso) {{/if_eq}} {{#if_eq typeOfPlan "typeHoursPerWeek" }} Tipo (Nado Libre) {{/if_eq}} Precio ${{price}}</option>
+    {{/plans}}
+  </select>
+</div>
+</div>

@@ -1,0 +1,348 @@
+@import url("schedule.css");
+@import url("gallery.css");
+	
+.headerInitialSpace{
+	background-color: #0064a5;
+	opacity: 0.6;
+	padding-top: 1%;
+}
+
+ol.circle {list-style-type: circle;}
+
+.marginLeft{
+	margin-left: 5%;
+}
+
+.headerApplicationText {
+	font-weight: 200;
+	color: #FFFFFF;
+}
+
+.headerIndex{
+	background-color: #0D66A4;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.navbarCustomize {
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.navbarText {
+	color: #FFFFFF;
+	font-weight: 200;
+}
+
+.footerSeparatorIndex {
+	padding-top: 5px;
+	margin-top: 5px;
+	border-top: #66A2CA medium solid;
+}
+
+.centraltextIndex {
+	padding-left: 7%;
+}
+
+
+.informationContainer {
+	background-color: #FFFFFF;
+}
+
+.theaderTables {
+	background-color: #7098C6;	
+	font-weight: bold;
+	color: #F5F5F5;
+}
+
+.informationArticleTitle {
+	font-weight: bold;
+	color: #575756;
+}
+
+.tableTextFirst {
+font-size: small;
+font-weight: bold;
+}
+
+
+.tableTextSecond{
+font-size: small;
+font-weight: 200;
+}
+
+.footerText {
+font-weight: bold;
+font-size: 12px;
+}
+
+.borderInformationContainerIndex {
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+
+}
+
+.backgroundImage{
+	background:url(../../../images/backWeb.jpg);
+	background-size: 100% 100%;
+}
+
+.borderTable{
+border: 2px solid #3580BC !important;
+
+}
+
+.navbarCustomize {
+	margin-bottom: 0px;
+	border-radius: 0px;
+	padding:0px 0px; 
+}
+
+
+/* Estilos de textos .... tamaños fuentes */
+
+@font-face {
+    font-family: UniversCn;
+    src: url(font/UniversLTStd-Cn.otf);
+    
+}
+
+
+@font-face {
+    font-family: UniversBoldCn;
+    src: url(font/UniversLTStd-BoldCn.otf);
+    
+}
+
+.bodytext {
+	font-size: large;
+	font-weight: 200;
+}
+
+
+.bodyTextSmall{
+	font-family: UniversCn;
+	font-size: 12px;
+}
+
+.navbarText {
+	font-family: UniversCn;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 100;
+}
+
+.headerApplicationText {
+	color: #653;
+	font-size:12px;
+}
+
+
+.textTitle{
+	font-size: 20px;
+	font-family: UniversBoldCn;
+	color:#575756;
+}
+
+.blueTextTitleLarge{
+	font-size: 24px;
+	font-family: UniversBoldCn;
+	color:#015FAD;
+}
+
+.dashedLineBlue{
+	border-style: dashed;
+    border-width: 1px;
+    color:#015FAD;
+}
+
+.blueTextTitleMedium{
+	font-size: 17px;
+	font-family: UniversBoldCn;
+	color:#015FAD;
+}
+
+.blueTextTitleNormal{
+	font-size: 15px;
+	color:#015FAD;
+}
+
+.textTitleBasic{
+	font-size: 14px;
+	font-family: UniversBoldCn;
+	color:#575756;
+}
+
+.textIndexSchedule{
+	font-size: 17px;
+	font-family: UniversCn;
+}
+
+.textWebPage{
+	font-size: 15px;
+	font-weight: bold;
+}
+.textNormal{
+	font-size: 14px;
+}
+
+.textSmall{
+	font-size: 12px;
+}
+
+.textCursiva{
+	font-style: italic
+}
+
+form label{
+	font-size: 14px;
+	font-family: UniversBoldCn;
+}
+
+.textUpper{
+	text-transform: uppercase;
+}
+
+
+form input{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+form textarea{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+form select{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+form ::-webkit-input-placeholder{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #f00;
+
+}
+
+form ::-moz-placeholder {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #f00;
+
+}
+form :-ms-input-placeholder 
+{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #f00;
+
+}
+form input:-moz-placeholder {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #f00;
+
+}
+
+table thead {
+	background-color: #f6f6f6;
+	border-bottom: 5px solid #ddd !important;
+}
+
+.thTable{
+	background-color: #f6f6f6;
+	border-right: 5px solid #ddd !important;	
+}
+
+.botonGuardar{
+	text-align: right;
+	font-size: 14px;
+	font-family: UniversBoldCn;
+}
+
+
+.botonSearch{
+	text-align: right;
+	font-size: 14px;
+	font-family: UniversBoldCn;
+}
+
+.line{
+	width: 60%;
+	height: 2px;
+	background-color:#C3C3C3;
+}
+
+
+.dgcAlert {
+	top: 0;
+	position: absolute;
+	width: 100%;
+	display: block;
+	height: 1000px;
+	background: url(../../../images/fondoAlert.png) repeat; 
+	text-align:center; 
+	opacity:0; 
+	display:none; 
+	z-index:999999999999999;
+}
+.dgcAlert .dgcVentana{
+	width: 300px; 
+	background: white;
+	min-height: 150px;
+	position: relative;
+	margin: 0 auto;
+	color: black;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.dgcAlert .dgcVentana .dgcCerrar {
+	height: 25px;
+	width: 25px;
+	float: right; 
+	cursor:pointer; 
+	background: url(../../../images/cerrarAlert.jpg) no-repeat center center;
+}
+
+.dgcAlert .dgcVentana .dgcMensaje { 
+	margin: 0 auto; 
+	padding-top: 20px; 
+	text-align: center; 
+	width: 200px;
+	font-family: UniversCn;
+	color: #716969;
+	font-size: 16px;
+	font-weight: 100;}
+
+.dgcAlert .dgcVentana .dgcAceptar{
+	background:#09C; 
+	bottom:10px; 
+	display: inline-block; 
+	font-size: 12px; 
+	font-weight: bold; 
+	height: 24px; 
+	line-height: 24px; 
+	padding-left: 5px; 
+	padding-right: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 75px;
+	cursor: pointer;
+	color:#FFF;
+	margin-top:50px;
+}
+
+
+

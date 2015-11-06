@@ -1,0 +1,23 @@
+<table id="usersInformation"class="table table-striped table-bordered table-hover table-condensed hola">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Rut</th>
+      <th>Opci&oacute;n</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#users}}
+    <tr id={{id}}>
+      <td>#</td>
+      <td>{{names}}</td>
+      <td>{{firstLastName}}</td>
+      <td id="idUser">{{rut}}</td>
+      <td align="center"><a><span id="viewUser" class="glyphicon glyphicon-zoom-in">
+        &nbsp;<a><span id="eliminateUser" class="glyphicon glyphicon-floppy-remove"></a></span></td>
+    </tr>
+    {{/users}}
+  </tbody>
+</table>

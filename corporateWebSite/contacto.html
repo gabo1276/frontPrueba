@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
+  <script src="../sendEmailValidate.js"></script>
+  
+  <script>
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(-33.464480, -70.658463);
+    var mapOptions = {
+      zoom: 16,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    }
+    var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Piscina Temperada De Santiago'
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+  
+  $(document).ready(function() {
+    $("#send_email").click(function() {
+      var name, to, subject, text;
+      validateForm.validateForm();
+      if (validateForm.isValidForm()) {
+        name = $("#from").val();
+        to = $("#to").val();
+        subject = "Responder a: " + name + " " + to;
+        text = $("#content").val();
+        alert("Correo enviado");
+        $.get("http://localhost:3000/send", {
+          subject: subject,
+          text: text
+        }, function(data) {
+          if (data == "sent") {
+            alert("Su consulta se ha enviado con exito!");
+          }
+        });
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+  <div class="row backgroundImage">
+    <div class="container my-container">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="headerInitialSpace"></div>
+              <div id="header"></div>
+              <script type="text/javascript">
+              $('#header').load('header.html');
+              </script>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12">
+              <div class="informationContainer">
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col-md-1">
+                  </div>
+                  
+                  <div class="col-md-10">
+                    
+                    <div class="row">
+                      <div class="col-md-8">
+                        <p class="informationArticleTitle  textTitle">CONTACTO</p>
+                        <form role="form" class="informationArticleTitle" id="sendEmailform">
+                          <div class="form-group">
+                            <label class="textSmall">NOMBRE</label>
+                            <input class="form-control" name="from" id="from">
+                          </div>
+                          <div class="form-group">
+                            <label class="textSmall" for="email" >EMAIL</label>
+                            <input class="form-control" name="to" id="to">
+                          </div>
+                          <div class="form-group">
+                            <div class="form-group">
+                              <label class="textSmall" for="name">MENSAJE</label>
+                              <textarea class="form-control" rows="5" name="content" id="content"></textarea>
+                            </div>
+                          </div>
+                          <button id="send_email" type="submit" class="btn btn-default">Enviar</button>
+                        </form>
+                      </div>
+                    </div>
+                    <br>
+                    <p class="informationArticleTitle">recepcionpot@cordesan.cl<br>  +56 2 259 21 590</p>
+                    <p class="informationArticleTitle textTitle">UBICACI&OacuteN</p>
+                    <div id="googleMap" style="width: 280px; height: 180px"></div>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="headerInitialSpace"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div id="footer" ></div>
+        <script type="text/javascript">
+        $('#footer').load('footer.html');
+        </script>
+      </div>
+    </div>
+  </div>
+</body>

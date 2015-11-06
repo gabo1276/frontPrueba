@@ -1,0 +1,8 @@
+<div class="jumbotron">
+    <h3 id="{{payment.id}}" class="informationArticleTitle">Información del pago</h3>
+    <label class="control-label" value="{{payment.numberOfTicket}}">N° Boleta: {{payment.numberOfTicket}}</label><br>
+    <label class="control-label" value="{{payment.formOfPayment}}">Forma de Pago:  {{#if_eq payment.formOfPayment "cash" }}Efectivo{{/if_eq}}{{#if_eq payment.formOfPayment "cheque" }}Cheque{{/if_eq}}{{#if_eq payment.formOfPayment "transfer" }}Transferencia{{/if_eq}}</label><br>
+    <label class="control-label" value="{{payment.chequeNumber}}">N° de Cehque: ${{payment.chequeNumber}}</label><br>
+    <label class="control-label" value="{{payment.bank}}">Banco: ${{payment.bank}}</label><br>
+</div>
+

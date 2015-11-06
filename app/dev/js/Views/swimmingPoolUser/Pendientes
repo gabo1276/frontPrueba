@@ -1,0 +1,15 @@
+Pendients 7/7/15
+
+
+-MAYUSCULAS (Todo lo que se ingrese o cree en la bd).
+-Informacion del plan en cliente falta mostrar el tipo de plan.
+
+-Reponer o Consumir hora.
+ Un boton anular hora tomada, este boton debera tener un lapso de tiempo en el que funcione.
+
+ Listos 
+ -Ordenar comunas por orden alfabetico.
+
+FELIPE 
+-Cambiar el consumo a horas agua (si completo 2 horas cronologicas se deben consumir 2 del plan, si el consumo es menos de 2 horas cronologicas, el sistema solo debe descontar 1 hora del plan y si consumen menos de una hora cronologia, se debe descontar 1 hora).
+-Salida de la piscina es posible realizarla solo una vez.

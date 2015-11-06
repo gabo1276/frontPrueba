@@ -1,0 +1,86 @@
+<br>
+<div class ="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+        <p class="textTitle">Crear Item</p>
+        <div class="line"></div><br>
+        <form id="createItemForm" role="form" class=".form-inline informationArticleTitle"><br>
+            <div class="form-group">
+                <div class="col-md-12">
+                    
+                    <div class="form-group row">
+                        <label for="inputKey" class="col-md-2 control-label">Nombre del Ítem</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control textUpper" name="name" value="{{item.name}}" id="name" placeholder="Nombre del Item">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputKey" class="col-md-2 control-label">Cantidad</label>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" name="quantity" value="{{item.quantity}}" id="quantity" placeholder="Cantidad Ej: 3">
+                        </div>
+
+                        <label for="inputKey" class="col-md-2 control-label">Cantidad Mínima</label>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" name="minQuantity" value="{{item.minQuantity}}" id="minQuantity" placeholder="Cantidad Ej: 3">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        
+                        <label for="inputKey" class="col-md-2 control-label">Categor&iacutea </label>
+                        <div class="col-md-8">
+                            
+                            <select name="categoryCombo" class="form-control" id="categoryCombo">
+                                <option value="" selected >Seleccione Categoria</option>
+                                {{#category}}
+                                <option value="{{id}}">{{name}}</option>
+                                {{/category}}
+                            </select>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="unitMeasure">
+                            <label for="inputKey" class="col-md-2 control-label">Unidad de Medida</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" name="unitMeasure" id="unitMeasure" value="{{item.unitMeasure}}" placeholder="Unidad de Medida Ej: Kg, Uni, L">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="unitMeasure">
+                            <label for="inputKey" class="col-md-2 control-label">Descripción</label>
+                            <div class="col-md-8">
+                                <textarea class="form-control textUpper" rows="6" maxlength="500" value="{{item.description}}" name="description" id="despcription" placeholder="Descripción">{{item.description}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        
+                        <label for="inputKey" class="col-md-2 control-label">Estado</label>
+                        <div class="col-md-8">
+                            
+                            <select name="stateCombo" class="form-control" id="stateCombo">
+                                <option value="" selected >Seleccione Estado</option>
+                                {{#state}}
+                                <option value="{{id}}">{{name}}</option>
+                                {{/state}}
+                            </select>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="form-group row">
+            <div class="col-md-12 botonGuardar">
+                <label id="saveItem" class="control-label btn btn-primary">Guardar Item</label>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

@@ -1,0 +1,56 @@
+<script src="../../../../../../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../../../../../../bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js">
+</script>
+<link href="../../../../../../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" media="screen">
+<script>
+$('#startValidDate, #endValidDate').datepicker({
+language: "es",
+orientation: "top auto"
+});
+</script>
+<br>
+<div class ="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+        
+        <form id="addScheduleForm" role="form" class=".form-inline informationArticleTitle"><br>
+            <div class="form-group">
+                <div class="col-md-12">
+                    
+                    <div class="form-group row">
+                        <label for="inputKey" class="col-md-3 control-label">Nombre del Plan</label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" name="name" value="{{name}}" id="name" placeholder="Nombre del plan">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputValue" class="col-md-2 control-label">Día de Inicio</label>
+                        <div class="col-md-3">
+                            <input type="text" id="startValidDate" name="startValidDate" value="{{startValidDate}}" class="form-control"><!-- <span class="input-group-addon"><i class="glyphicon glyphicon-th"> </i></span> -->
+                        </div>
+                        
+                        <label for="inputValue" class="col-md-2 control-label">Día de Fin</label>
+                        <div class="col-md-3">
+                            <input type="text" id="endValidDate" name="endValidDate" value="{{endValidDate}}" class="form-control"><!-- <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span> -->
+                        </div>
+                    </div>
+                     <div class="form-group row">
+                        <label for="inputValue" class="col-md-2 control-label">Descripción</label>
+                        <div class="col-md-8">
+                            <textarea class="form-control" rows="3" maxlength="40" value="{{description}}" name="description" id="despcription" placeholder="Descripción">{{description}}</textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="form-group row">
+            <div class="col-md-5">
+                <label id="savePlan" class="control-label btn btn-primary">Guardar Plan</label>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

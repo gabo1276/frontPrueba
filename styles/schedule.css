@@ -1,0 +1,14 @@
+.selected{
+	background-color: rgb(150, 176, 228);
+	border: 4px solid #ddd !important;
+}
+
+.selectedExample{
+	background-color: rgb(90, 197, 144);
+	border: 4px solid #ddd !important;
+}
+
+
+.schedule {
+	background-color: #FFF;
+}

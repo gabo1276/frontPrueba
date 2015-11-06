@@ -1,0 +1,92 @@
+<br>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <p class="textTitle">Datos Pago</p>
+    <div class="line"></div><br>
+    <form id="addPaymentForm" role="form" class=".form-inline informationArticleTitle">
+      <div class="form-group">
+        <div class="col-md-12">
+          
+          <div class="form-group row">
+            <label for="inputKey" class="col-md-2 control-label">Número de Boleta</label>
+            <div class="col-md-8">
+              <input type="text" class="form-control" name="numberOfTicket" value="{{payment.numberOfTicket}}" id="numberOfTicket" placeholder="Numero de Boleta">
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label for="inputKey" class="col-md-2 control-label">Forma de Pago</label>
+            <div class="col-md-4">
+              <select name="formOfPayment" class="form-control" id="formOfPayment">
+                <option  value=""></option>
+                <option   value="Transferensia">Transferencia</option>
+                <option   value="Efectivo">Efectivo</option>
+                <option   value="Cheque">Cheque</option>
+              </select>
+            </div>
+            
+            <div id="ChequeContainer">
+              <label for="inputKey" class="col-md-2 control-label">Numero de Cheque</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" name="chequeNumber" id="chequeNumber" value="{{plan.chequeNumber}}" placeholder="Nº Cheque">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputKey" class="col-md-2 control-label">Banco</label>
+            <div class="col-md-8">
+              <select name="bank" class="form-control" id="bank">
+                <option value=""></option>
+                <option value="BANCO DE CHILE"> BANCO DE CHILE </option>
+                <option value="BANCO INTERNACIONAL"> BANCO INTERNACIONAL </option>
+                <option value="SCOTIABANK CHILE"> SCOTIABANK CHILE </option>
+                <option value="BANCO DE CREDITO E INVERSIONES"> BANCO DE CREDITO E INVERSIONES </option>
+                <option value="CORPBANCA"> CORPBANCA </option>
+                <option value="BANCO BICE"> BANCO BICE </option>
+                <option value="HSBC BANK (CHILE)"> HSBC BANK (CHILE) </option>
+                <option value="BANCO SANTANDER-CHILE"> BANCO SANTANDER-CHILE </option>
+                <option value="BANCO ITAÚ CHILE"> BANCO ITAÚ CHILE </option>
+                <option value="BANCO SECURITY"> BANCO SECURITY </option>
+                <option value="BANCO FALABELLA"> BANCO FALABELLA </option>
+                <option value="DEUTSCHE BANK (CHILE)"> DEUTSCHE BANK (CHILE) </option>
+                <option value="BANCO RIPLEY"> BANCO RIPLEY </option>
+                <option value="RABOBANK CHILE (ex HNS BANCO)"> RABOBANK CHILE (ex HNS BANCO) </option>
+                <option value="BANCO CONSORCIO (ex BANCO MONEX)" > BANCO CONSORCIO (ex BANCO MONEX) </option>
+                <option value="BANCO PENTA"> BANCO PENTA </option>
+                <option value="BANCO PARIS"> BANCO PARIS </option>
+                <option value="BANCO BILBAO VIZCAYA ARGENTARIA, CHILE (BBVA)"> BANCO BILBAO VIZCAYA ARGENTARIA, CHILE (BBVA) </option>
+                <option value="BANCO BTG PACTUAL CHILE"> BANCO BTG PACTUAL CHILE </option>
+                <option value="BANCO ESTADO DE CHILE">BANCO ESTADO DE CHILE</option>
+              </select>
+            </div>
+            
+            <div hidden id="ChequeContainer">
+              <label for="inputKey" class="col-md-2 control-label">N° de Cheque</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" name="cheque" id="cheque" value="{{plan.cheque}}" placeholder="Nº Cheque">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label for="inputValue" class="col-md-2 control-label">Observaciones</label>
+            <div class="col-md-10">
+              <textarea class="form-control textUpper" rows="3" maxlength="500" value="{{plan.observations}}" name="observations" id="despcription" placeholder="Descripción">{{plan.observations}}</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+       <br>
+    </form>
+    <br>
+    <div class="form-group row">
+      <br>
+      <div class="col-md-12 botonGuardar">
+        <label id="previousProductForm" class="col-md-4 control-label btn btn-primary">Anterior Datos Producto</label>
+        <label id="savePayment" class="col-md-offset-4 col-md-4 control-label btn btn-primary">Generar Pago</label>
+      </div>
+  </div>
+</div>
+<br>

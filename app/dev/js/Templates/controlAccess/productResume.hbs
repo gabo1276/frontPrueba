@@ -1,0 +1,14 @@
+<div class="jumbotron">
+    <h3 id="{{product.id}}" class="informationArticleTitle">Resumen de Producto</h3>
+    <label class="control-label" value="{{product.nameOfPlan}}">Nombre Plan: {{product.nameOfPlan}}</label><br>
+    
+
+    {{#if_not_null product.hoursOfPlan}}<label class="control-label" style="color: red" value="{{product.hoursOfPlan}}">Horas totales: {{product.hoursOfPlan}}</label><br>{{/if_not_null}}
+
+
+    {{#if_not_null product.blocksOfPlan }}<label class="control-label" style="color: red" value="{{product.blocksOfPlan}}">Horas totales: {{product.blocksOfPlan}}</label><br>{{/if_not_null}}
+    {{#if_not_null product.penaltyHours }}<label class="control-label" style="color: red" value="{{product.penaltyHours}}">Horas penalizadas: {{product.penaltyHours}}</label><br>{{/if_not_null}}
+
+     <label class="control-label" style="color: red" value="{{product.leftHours}}">Horas faltantes: {{product.leftHours}}</label><br>
+
+</div>

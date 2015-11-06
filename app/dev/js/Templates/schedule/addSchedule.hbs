@@ -1,0 +1,80 @@
+<br>
+<div class ="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+        <p class="textTitle">Crear Horario</p>
+        <div class="line"></div><br>
+        
+        <form id="addScheduleForm" role="form" class=".form-inline informationArticleTitle"><br>
+            <div class="form-group">
+                <div class="col-md-12">
+
+                    <div class="form-group row">
+
+                        <label for="inputKey" class="col-md-3 control-label">Nombre del Horario </label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control textUpper serializable" name="name" value="{{name}}" id="name" placeholder="Nombre del nuevo horario">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputValue" class="col-md-3 control-label">Descripción</label>
+                        <div class="col-md-5">
+                            <textarea class="form-control textUpper serializable" rows="3" maxlength="500" value="{{description}}" name="description" id="despcription" placeholder="Descripción">{{description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+
+                        <label for="inputKey" class="col-md-3 control-label">Tipo de Plan</label>
+                        <div class="col-md-5">
+                            <select class="form-control" name="plansScheduleCombo" value="plans" id="plansScheduleCombo">
+                                <option  selected ></option>
+                                {{#each plans}}
+                                <option  id="{{id}}" value="{{name}}">{{name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label id="planHoursRestrictionMessage" style= "color:red"class="control-label"></label>
+                        <label type="hidden" id="hoursCount" value=""></label>
+                    </div>
+
+                </div>
+            </div>
+        <table id= "schedule" class="table table-bordered schedule textTitleBasic">
+            <thead>
+                <tr>
+                    <th width="18%">Horario (Hrs.)</th>
+                    <th width="12%">Lunes</th>
+                    <th width="12%">Martes</th>
+                    <th width="12%">Miercoles</th>
+                    <th width="12%">Jueves</th>
+                    <th width="12%">Viernes</th>
+                    <th width="12%">Sabado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each daySections}}
+                <tr>
+                    <td class="thTable">{{title}}</td>
+                    {{#each daySectionId}}
+                    <td class="nonSelected" id={{this}}></td>
+                    {{/each}}
+                </td>
+                {{/each}}
+                </tbody>
+            </table>
+
+            <input type="hidden" class="form-control" name="scheduleValidation" id="scheduleValidation">
+        </form>
+        <br>
+        <div class="form-group row">
+            <div class="col-md-12 botonGuardar">
+                <label id="saveSchedule" class="control-label btn btn-primary ">Guardar Horario</label>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br>

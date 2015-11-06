@@ -1,0 +1,6 @@
+<select id= "commune" name="commune" value = "{{user.commune.name}}" class="form-control">
+	<option value="">Seleccione Comuna</option>
+	{{#communeCombo}}
+	<option id={{id}} value={{id}}>{{name}}</option>
+	{{/communeCombo}}
+</select>

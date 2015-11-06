@@ -1,0 +1,10 @@
+<label for="inputKey" class="col-md-2 control-label">Seleccione un Horario</label>
+<div class="col-md-5">
+  <select id= "schedulesCombo" name = "schedulesCombo" class="form-control">
+    <option value=""></option>
+    {{#schedules}}
+    <option id="{{id}}}" value="{{name}}">{{name}}</option>
+    {{/schedules}}
+  </select>
+</div>
+</div>

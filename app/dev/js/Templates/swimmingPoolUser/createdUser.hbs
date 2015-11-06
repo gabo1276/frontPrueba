@@ -1,0 +1,129 @@
+<script src="../../../../../../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../../../../../../bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js">
+</script>
+<link href="../../../../../../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" media="screen">
+<script>
+$('#birthDate').datepicker({
+language: "es",
+orientation: "top auto"
+});
+</script>
+
+<br>
+
+<div class ="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <p class="informationArticleTitle textTitle">Ingresar Usuario de la Piscina</p>
+        <div class="line"></div><br>
+        
+    <form id="addUserform" role="form" class=".form-inline informationArticleTitle "><br>
+      <div class="form-group">
+        <div class="col-md-12">
+          
+          <div class="form-group row">
+            
+            <label for="inputKey" class="col-md-1 control-label">Rut</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control textUpper" value="{{user.rut}}" name="rut" id="rut" placeholder="Rut" {{disabledIdUser}}>
+            </div>
+            <label for="inputValue" class="col-md-2 control-label">Fecha Nacimiento</label>
+            <div class="col-md-4">
+              <input id="birthDate" type="text" class="form-control" value="{{user.birthDate}}" name="birthDate" id="datepicker" placeholder="DD/MM/AAAA">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputValue" class="col-md-1 control-label">Nombres</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control textUpper" value="{{user.names}}" name="names" id="names" placeholder="Nombres">
+            </div>
+            <label for="inputValue" class="col-md-1 control-label">Apellido Paterno</label>
+            <div class="col-md-2">
+              <input type="text" class="form-control textUpper" value="{{user.firstLastName}}" name="firstLastName" id="firstLastName" placeholder="Apellido Paterno">
+            </div>
+            <label for="inputValue" class="col-md-1 control-label">Apellido Materno</label>
+            <div class="col-md-2">
+              <input type="text" class="form-control textUpper" value="{{user.secondLastName}}" name="secondLastName" id="secondLastName" placeholder="Apellido Materno">
+            </div>
+          </div>
+          <div class="form-group row">
+            
+            <label for="inputKey" class="col-md-2 control-label">Certificado Medico</label>
+            <div class="col-md-2">
+              <select name="medicalCertificate" class="form-control" value="{{user.medicalCertificate}}" id="medicalCertificate">
+                <option {{selected user.medicalCertificate "Si"}} value="Si">SI</option>
+                <option {{selected user.medicalCertificate "No"}} value="No">NO</option>
+              </select>
+            </div>
+            <label for="inputValue" class="col-md-2 control-label">Enfermedades</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control textUpper" value="{{user.sickness}}" name="sickness" id="sickness" placeholder="Enfermedades">
+            </div>
+            
+          </div>
+          <div class="form-group row">
+            
+            <label for="inputKey" class="col-md-1 control-label">Correo</label>
+            <div class="col-md-3">
+              <input type="text" class="form-control textUpper" value="{{user.email}}" name="email" id="email" placeholder="correo@correo.cl">
+            </div>
+            <label for="inputValue" class="col-md-1 control-label">Teléfono de emergencia</label>
+            <div class="col-md-3">
+              <input type="text" class="form-control" value="{{user.phone}}" name="phone" id="phone" placeholder="28145047">
+            </div>
+
+            <label for="inputValue" class="col-md-1 control-label">Celular</label>
+            <div class="col-md-3">
+              <input type="text" class="form-control" value="{{user.phoneMobile}}" name="phoneMobile" id="phoneMobile" placeholder="81779012">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputValue" class="col-md-1 control-label">Region</label>
+            
+            <div class="col-md-5" id="divComboRegion" >
+            
+            </div>
+            
+
+            <label for="inputValue" class="col-md-1 control-label">Comuna</label>
+            <div class="col-md-5" id="divComboCommunes">
+              <select id= "commune" name="commune" value = "{{user.commune.name}}" class="form-control">
+                <option value="">{{user.commune.name}}</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="form-group row">
+            <label for="inputKey" class="col-md-2 control-label">Dirección </label>
+            <div class="col-md-10">
+              <input type="text" class="form-control textUpper" value="{{user.address}}" name="address" id="address" placeholder="Dirección">
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label for="inputValue" class="col-md-2 control-label">Observaciones</label>
+            <div class="col-md-10">
+              <textarea class="form-control textUpper" rows="3" maxlength="500" value="{{user.comments}}" name="comments" id="comments" placeholder="Observaciones">{{user.comments}}</textarea>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label for="inputValue" class="col-md-3 control-label">Clave, generada automaticamente</label>
+            <div class="col-md-5">
+              <input class="form-control" {{disabledPassUser}} name="password" id="password" value="{{user.password}}" placeholder="Contraseña(6 primeros digitos del rut)" type="password">
+            </div>
+            <div class="col-md-3">
+            </div>
+            <label id="save" class="col-md-3 control-label btn btn-primary">Guardar Usuario</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+<br>

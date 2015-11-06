@@ -1,0 +1,24 @@
+<table id="scheduleInformation"class="table table-striped table-bordered table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#schedules}}
+    <tr id={{id}}>
+      <td>#</td>
+      <td>{{name}}</td>
+      <td>{{description}}</td>
+      <td align="center"> <a>
+        <span id="viewSchedule" class="glyphicon glyphicon-zoom-in"></span></a>
+        &nbsp;<a><span id="deleteSchedule" class="glyphicon glyphicon-floppy-remove"></span></a>
+      </td>
+    </tr>
+    {{/schedules}}
+  </tbody>
+</table>
+<p align="right"><a><span id="backwardGroupSchedule" class="glyphicon glyphicon glyphicon-step-backward"></span></a> Anterior | Siguiente <a><span id="forwardGroupSchedule" class="glyphicon glyphicon-step-forward"></span></a></p>

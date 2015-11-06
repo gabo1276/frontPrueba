@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="..//styles/styles.css">
+  <script src = "http://maps.googleapis.com/maps/api/js"> </script>
+  <script>
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(-33.464480, -70.658463);
+    var mapOptions = {
+      zoom: 16,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    }
+    var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Piscina Temperada De Santiago'
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  
+</head>
+<body>
+  <div class="row backgroundImage">
+    <div class="container my-container">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="headerInitialSpace"></div>
+              <div id="header"></div>
+              <script type="text/javascript">
+              $('#header').load('header.html');
+              </script>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12" >
+              
+              <div id="swimmingPoolCarousel" class="carousel slide" data-ride="carousel" >
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#swimmingPoolCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#swimmingPoolCarousel" data-slide-to="1" class="active"></li>
+                  <li data-target="#swimmingPoolCarousel" data-slide-to="2" class="active"></li>
+                  <li data-target="#swimmingPoolCarousel" data-slide-to="3" class="active"></li>
+                </ol>
+                
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="../../images/carousel/01.jpg" alt="...">
+                    <div class="carousel-caption">
+                      <!--<h3>Caption Text 1</h3>-->
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../../images/carousel/02.jpg" alt="...">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="../../images/carousel/03.jpg" alt="...">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="../../images/carousel/04.jpg" alt="...">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class = "col-md-12">
+                  <div class="borderInformationContainerIndex ">
+                    <br>
+                    
+                    <div class="row">
+                      <div class="col-md-8">
+                        
+                        <div class="row">
+                          <div class="col-md-1"></div> <!-- only left space -->
+                          
+                          <div class="col-md-10">
+                            <br>
+                            <article>
+                              <p class="blueTextTitleLarge">BIENVENIDOS</p>
+                              
+                              <p class="bodytext  textNormal">
+                                La piscina olimpica cubierta y temperada del parque O&#8216higgins tiene una infraestructura realmente maravillosa y de standares a los que probablemente no estemos acostumbrados, inaugurada recientemente y ubicada al interior del parque en un entorno sano y natural con amplios estacionamientos dispone de un &aacuterea de servicios para los usuarios con un total de 300 mts&sup2 que incluye espaciosos camarines con servicio de guardarrop&iacutea y lookers. para la atenci&oacuten de cursos y talleres contamos con un equipo de profesionales altamente capacitados en sus respectivas especialidades.<br>
+                                Todo se ve potenciado con grader&iacuteas para 320 personas comodamente sentadas y de una cafeter&iacutea para la atenci&oacuten de p&uacuteblico en general.
+                              </p>
+                              <p class="blueTextTitleMedium">HORARIO DE FUNCIONAMIENTO</p>
+                              <p class="textIndexSchedule">Lunes a Viernes: 7:00 a 21:00 hrs.<br> S&aacutebado : 9:00 a 17:00 hrs.</p>
+                              <p class="bodyTextSmall">
+                              NOTA: En caso de eventos especiales del Parque O&#8216Higgins se comunicar&aacute oportunamente.</p>
+                              <p class="textIndexSchedule">M&AacuteS INFORMACI&OacuteN DE LA PISCINA<a href="organization.html">
+                              <img src="../images/boton_aqui.jpg"  style="width:10%;height:10%;border:0;">
+                            </a></p>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <div class="row">
+                        <div class="col-md-10">
+                          <br>
+                          <p class="textTitleBasic">C&OacuteMO LLEGAR?</p>
+                          <div id="googleMap" style="width: 185px; height: 150px"></div><br>
+                          <a href="amigos.html"><img class="img-responsive" src="../images/sitio_amigos.jpg"></a><br>
+                          <img class="img-responsive" src="../images/social_network.png">
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <br>
+                </div>
+                <div class="headerInitialSpace"></div> <!-- only right space -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div id="footer" ></div>
+      <script type="text/javascript">
+      $('#footer').load('footer.html');
+      </script>
+    </div>
+  </div>
+</div>
+</body>
